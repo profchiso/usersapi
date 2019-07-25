@@ -16,7 +16,7 @@ mongoose.set('useNewUrlParser', true);
 
 
 
-mongoose.connect("mongodb+srv://test:test@cluster0-t9vby.mongodb.net/users",{useNewUrlParser: true}); //connecting to local mongodb server
+mongoose.connect("mongodb+srv://test:test@cluster0-t9vby.mongodb.net/users",{useNewUrlParser: true}); //connecting to  mongodb atlas server
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(bodyParser.json());

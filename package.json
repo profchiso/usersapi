@@ -1,5 +1,5 @@
 {
-  "name": "userApi",
+  "name": "usersApi",
   "version": "1.0.0",
   "description": "simple API",
   "main": "server.js",
