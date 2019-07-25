@@ -20,9 +20,6 @@ module.exports = (app)=>{
 
 
 
-
-
-
     //route to view all developer and also to add a developer
     app.route('/users')
     .get(auth, users.list_all_users)
