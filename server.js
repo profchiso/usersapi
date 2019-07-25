@@ -13,7 +13,9 @@ app.use(express.static('public'));
 mongoose.Promise = global.Promise;
 mongoose.set('useNewUrlParser', true);
 
-mongoose.connect("mongodb+srv://test:test@cluster0-t9vby.mongodb.net/users",{useNewUrlParser: true}); //connecting to local mongodb server
+mongoose.connect("mongodb://localhost:27017/userDB",{useNewUrlParser: true});
+
+//mongoose.connect("mongodb+srv://test:test@cluster0-t9vby.mongodb.net/users",{useNewUrlParser: true}); //connecting to local mongodb server
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(bodyParser.json());

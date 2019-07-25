@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+
 const User = mongoose.model('users');
+
 
 let today = new Date();
 let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();

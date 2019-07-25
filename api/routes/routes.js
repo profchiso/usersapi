@@ -1,9 +1,31 @@
 module.exports = (app)=>{
     const users = require('../controllers/controllers');
+    const basicAuth =require('basic-auth');
+
+    const auth = (req, res, next)=> {
+      let user = basicAuth(req);
+      if (!user || !user.name || !user.pass) {
+        res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+        res.sendStatus(401);
+        return;
+      }
+      if (user.name === 'test' && user.pass === 'pass1234') {
+        next();
+      } else {
+        res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+        res.sendStatus(401);
+        return;
+      }
+    }
+
+
+
+
+
 
     //route to view all developer and also to add a developer
     app.route('/users')
-    .get(users.list_all_users)
+    .get(auth, users.list_all_users)
     .post(users.add_user);
 
     //route by id
