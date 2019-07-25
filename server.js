@@ -7,6 +7,8 @@ const routes = require('./api/routes/routes');
 
 const app = express(); //creating instance of express
 const port= process.env.PORT  || 3000; // defining the port for the server to run on
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 mongoose.Promise = global.Promise;
 mongoose.set('useNewUrlParser', true);
@@ -17,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 routes(app);
 //target the home route to avoid 404
-app.get('/',(req,res)=>{res.sendFile('index.html')});
+app.get('/',(req,res)=>{res.sendFile(__dirname+'/index.html')});
 //handling some http error that may occur
 app.use((req,res)=>{
     res.status(404).send({url: req.originalUrl + ' 404 Not found'});
