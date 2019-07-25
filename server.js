@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const Developer = require('./api/models/models');
 const routes = require('./api/routes/routes');
-//var basicAuth = require('basic-auth');
+
 
 const app = express(); //creating instance of express
 const port= process.env.PORT  || 3000; // defining the port for the server to run on
@@ -14,7 +14,7 @@ app.use(express.static('public'));
 mongoose.Promise = global.Promise;
 mongoose.set('useNewUrlParser', true);
 
-//mongoose.connect("mongodb://localhost:27017/userDB",{useNewUrlParser: true});
+
 
 mongoose.connect("mongodb+srv://test:test@cluster0-t9vby.mongodb.net/users",{useNewUrlParser: true}); //connecting to local mongodb server
 app.use(bodyParser.urlencoded({extended: true}));
