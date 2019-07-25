@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 routes(app);
 //target the home route to avoid 404
-app.get('/',(req,res)=>{res.send('Welcome to  PM Global API home route')});
+app.get('/',(req,res)=>{res.sendFile('index.html')});
 //handling some http error that may occur
 app.use((req,res)=>{
     res.status(404).send({url: req.originalUrl + ' 404 Not found'});
