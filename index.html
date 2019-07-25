@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <heed>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>PM | Global </title>
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+</style>
+    </heed>
+    <body>
+      <div class="container">
+        <header>
+            <h2> Welcome to PM | Global RESTful JSON HTTP API Task </h2>
+            <p>Implemented by <b>OKORIE CHINEDU SUNDAY</b></p>
+        </header>
+        <main>
+            <section>
+
+              <div>
+                <h5>Project Title</h5>
+                <p>A simple user Api</p>
+              </div>
+              <div class="">
+                <p>See instructions below on how to use the API</p>
+              </div>
+              <div>
+                  <h5>## Getting Started</h5>
+
+                  These instructions will guide you through running this app
+              </div>
+              <div>
+                 <h5> ### Prerequisites</h5>
+
+                 <p> What things you need to run this App</p>
+                  
+               <ul>
+                  <li>Internet connection<b>(required)</b></li>
+                  <li>Web browser (preferably Google Chrome)</li>
+                  <li> <b> POSTMAN application  </b> or <b>Any  Rest </b> , preferably POSTMAN</li>
+                  <li>JSONview a google chrome extension to help format the views <b>(optional)</b></li>
+               </ul>
+              </div>
+              <div>
+                <h5>#### Routes</h5>
+                <ul>
+                   <li>/users</li> 
+                    <li> /users/:userId</li>
+                    <li> /users/firstname/:firstname</li>
+                  
+                    <li>/users/lastname/:lastname</li>
+                    <li>/users/gender/:gender</li>
+                
+                   <li>/users/sort/firstname</li>
+                   
+                  <li>/users/sort/lastname</li>
+
+                </ul>
+              </div>
+
+
+              <div class="">
+                  <h4> ##### Operations on POSTMAN </h4>
+                <div>
+                  <p>Launch the application by clicking <a href="https://radiant-springs-82648.herokuapp.com/" target="_blank">here</a></p>
+                </div>
+                <di>
+                  <ol>
+                  <li><h6>To  view all users</h6>
+                  <p>Type this url <b> https://radiant-springs-82648.herokuapp.com/users </b> in the browser or in POSTMAN Address bar and click on send<p>Note the HTTP Method must be <b>GET</b></p>
+                </li>
+
+                <li><h6>To add a user</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users</b>  in POSTMAN Address bar ,
+                    <br>below the url in POSTMAN app select<b> Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the fieldnames  in the <b>KEY</b> and the values in the <b>VALUE</b><br>  
+                   <p></p> Note the http method must be <b>POST</b></p>
+                </li>
+
+
+                <li><h6>To  view a user by id</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/id </b> in the browser or in POSTMAN Address bar and click on send, where the <b>id</b> is any of the user id<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/5d34badd9ea3370004337c71</b></p> Note the http method must be <b>GET</b></p>
+                </li>
+
+                <li><h6>To  view  user by <b>firstname</b></h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/firstname </b> in the browser or in POSTMAN Address bar and click on send, where the <b>firstname</b> is any of the user firstname<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/chinedu</b></p> Note the http method must be <b>GET</b></p>
+                </li>
+
+                <li><h6>To  view  user by <b>lastname</b></h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/lastname </b> in the browser or in POSTMAN Address bar and click on send, where the <b>lastname</b> is any of the user lastname<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/ben</b></p> Note the http method must be <b>GET</b></p>
+                </li>
+
+                
+                <li><h6>To  view  user by <b>gender</b></h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/gender </b> in the browser or in POSTMAN Address bar and click on send, where the <b>gender</b> is either male or female<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/male</b></p> Note the http method must be <b>GET</b></p>
+                </li>
+
+               
+
+                <li><h6>To <b> update</b>  some fields  say <b>firstname, date of birth</b> of a user with a given id</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/id </b>  in POSTMAN Address bar ,
+                    <br>below the url in POSTMAN app select <b>Body</b><br> below the Body select <b> x-www-form-urlencoded</b> <br> then enter the field name that you want to update in the <b>KEY</b> and the value you want it to be changed to in the <b>VALUE</b><br>
+                   where the id is any of the users id<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/5d34badd9ea3370004337c71</b></p> Note the http method must be <b>PATCH </b></p>
+                </li>
+
+                <li><h6>To <b>update</b> all fields of a user with a given id</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/id </b>  in POSTMAN Address bar ,
+                    <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the  all the fields in the <b>KEY</b> and the value you want them to be changed to in the <b>VALUE</b> then click send<br>
+                   where the id is any of the users id<p><b>e.g https://radiant-springs-82648.herokuapp.com/users/5d34badd9ea3370004337c71</b></p> Note the http method must be <b>PUT</b></p>
+                </li>
+
+                <li><h6>To <b>delete</b> a user with a given id</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/id </b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   where the id is any of the users id <p><b>e.g https://radiant-springs-82648.herokuapp.com/users/5d34badd9ea3370004337c71</b></p> note the http method must be <b>DELETE</b></p>
+                </li>
+
+                <li><h6>To <b>sort</b> the users by firstname</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/sort/<b>firstname</b></b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   <p><b>e.g https://radiant-springs-82648.herokuapp.com/users/sort/firstname</p> Note the http method must be <b>GET</b></p>
+                </li>
+                <li><h6>To <b>sort</b> the users by lastname</h6>
+                  <p>Type this url<b> https://radiant-springs-82648.herokuapp.com/users/sort/<b>lasttname</b></b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   <p><b>e.g https://radiant-springs-82648.herokuapp.com/users/sort/lastname</p> Note the http method must be <b>GET</b></p>
+                </li>
+
+                </ol>
+                </di>
+
+              </div> 
+            </section>
+        </main>
+        <footer>
+           <div class="">
+             <h4> DEVELOPERS CONTACTS</h4>
+            <p>Name: Okorie chinedu sunady</p>
+            <p>E-Mail : okoriechinedusunday@gmail.com </p>
+            <p>Phone : +2348036009397</p>
+          </div>
+           
+        </footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+          </div>
+    </body>
+</html>
