@@ -6,7 +6,7 @@ const User = mongoose.model('users');
 let today = new Date();
 let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-const dateTime = date+'T'+time;
+const dateTime = date+' '+ time;
 
 
 //controller to view all developers
@@ -27,9 +27,9 @@ exports.add_user =(req,res)=>{
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         gender: req.body.gender,
-        date_of_birth: req.body.date_of_birth,
-        date_created: dateTime,
-        date_updated: dateTime
+        date_of_birth: req.body.date_of_birth
+       // date_created: dateTime,
+       // date_updated: dateTime
     });
 
     newUser.save((err,user)=>{
