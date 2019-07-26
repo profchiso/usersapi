@@ -5,6 +5,7 @@ module.exports = (app)=>{
     const auth = (req, res, next)=> {
       let user = basicAuth(req);
       if (!user || !user.name || !user.pass) {
+        res.statusCode = 401
         res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
         res.sendStatus(401);
         return;

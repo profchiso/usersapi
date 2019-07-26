@@ -20,7 +20,8 @@ const userSchema = new Schema({
         required: "Enter date of birth"
     },
     date_created:{
-        type: String
+        type: Date,
+        default: Date.now()
         
         
 
