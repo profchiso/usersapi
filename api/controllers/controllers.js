@@ -23,7 +23,14 @@ exports.list_all_users =(req,res)=>{
 
 //controller to add a user
 exports.add_user =(req,res)=>{
-    let newUser = new User(req.body);
+    let newUser = new User({
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        gender: req.body.gender,
+        date_of_birth: req.body.date_of_birth,
+        date_created: dateTime,
+        date_updated: dateTime
+    });
 
     newUser.save((err,user)=>{
         if(!err){
